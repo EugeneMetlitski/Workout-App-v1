@@ -1,0 +1,21 @@
+
+<div id="banner-login">
+  <button class="btn-grey" routerLink="/workout-app/register">Register</button>
+</div>
+
+<!-- <div id="form"> -->
+<form [formGroup]="form" (submit)="submit()">
+  <input formControlName="username" id="username" type="text">
+  <label for="username">Username</label>
+  
+  <input formControlName="password" id="password" type="password">
+  <label for="password">Password</label>
+
+  <label id="warning"
+    *ngIf="warning.msg.length > 0"
+    [style.background]="warning.color">
+      {{ warning.msg }}
+  </label>
+
+  <button [disabled]="form.invalid || btnSubmitDisabled" class="btn-grey">Login</button>
+</form>

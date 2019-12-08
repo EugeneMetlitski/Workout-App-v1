@@ -1,0 +1,177 @@
+
+// GREY BUTTON
+.btn-grey {
+    display: inline-block;
+
+    padding: 1px 7px;
+
+    background: #C4C4C4;
+
+    border: 1px solid #C4C4C4;
+    border-radius: 10px;
+
+    color: #030303;
+    font-family: 'Stylish', sans-serif;
+    font-size: 13px;
+    font-weight: bold;
+}
+.btn-grey:hover {
+    cursor: pointer;
+    background: #c4c4c4cc;
+}
+.btn-grey:active {
+    background: #84bdcecc;
+    border: 1px outset #617880cc;
+}
+.btn-grey:focus {
+    border: 1px solid rgba(81, 203, 238, 1);
+    box-shadow: 0 0 5px rgba(81, 203, 238, 0.5);
+    outline: none;
+}
+
+
+// BLUE BUTTON
+.btn-blue {
+    display: inline-block;
+
+    padding: 1px 7px;
+
+    background: #4056A1;
+
+    border: 1px solid #4056A1;
+    border-radius: 10px;
+
+    color: #E3E2DE;
+    font-family: 'Stylish', sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+}
+.btn-blue:hover {
+    cursor: pointer;
+    border: 1px solid rgb(52, 60, 150);
+    background: rgb(52, 60, 150);
+}
+.btn-blue:active {
+    color: grey;
+    border: 1px outset rgb(25, 29, 73);
+    background: rgb(25, 29, 73);
+}
+.btn-blue:focus {
+    border: 1px solid rgb(110, 160, 129);
+    box-shadow: 0 0 5px rgba(110, 160, 129, 0.5);
+    outline: none;
+}
+
+
+// EXPAND BUTTON
+.btn-expand {
+    display: inline-block;
+    
+    position: relative;
+    width: 22px;
+    height: 22px;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: transparent;
+
+    mat-icon {
+        position: absolute;
+        top: -2px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    
+        color: #1A1A1C;
+        font-size: 24px;
+    }
+}
+.btn-expand:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 5px rgba(102, 19, 19, 0.205);
+}
+.btn-expand:active {
+    background: rgba(19, 25, 102, 0.15);
+    mat-icon {
+        color: rgba(42, 42, 80, 0.74);
+    }
+}
+.btn-expand:focus {
+    box-shadow: 0 0 5px rgba(102, 19, 19, 0.205);
+    outline: none;
+}
+
+
+// DELETE BUTTON
+.btn-delete {
+    display: inline-block;
+    
+    position: relative;
+    width: 22px;
+    height: 22px;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: transparent;
+
+    mat-icon {
+        position: absolute;
+        top: 1px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    
+        color: rgb(100, 16, 16);
+        font-size: 19px;
+    }
+}
+.btn-delete:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 5px rgba(102, 19, 19, 0.205);
+}
+.btn-delete:active {
+    background: rgba(102, 19, 19, 0.15);
+    mat-icon {
+        color: rgb(114, 61, 61);
+    }
+}
+.btn-delete:focus {
+    box-shadow: 0 0 5px rgba(102, 19, 19, 0.205);
+    outline: none;
+}
+
+
+// EDIT BUTTON
+.btn-edit {
+    display: inline-block;
+    
+    position: relative;
+    width: 22px;
+    height: 22px;
+
+    border: 1px solid transparent;
+    border-radius: 5px;
+    background: transparent;
+
+    mat-icon {
+        position: absolute;
+        top: 3px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    
+        color: #1A1A1C;
+        font-size: 14px;
+    }
+}
+.btn-edit:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 5px rgba(102, 19, 19, 0.205);
+}
+.btn-edit:active {
+    background: rgba(19, 25, 102, 0.15);
+    mat-icon {
+        color: rgba(42, 42, 80, 0.74);
+    }
+}
+.btn-edit:focus {
+    box-shadow: 0 0 5px rgba(102, 19, 19, 0.205);
+    outline: none;
+}

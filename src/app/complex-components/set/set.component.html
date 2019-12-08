@@ -1,0 +1,33 @@
+
+<div id="banner">
+  <div>
+    <label>Set {{ number }}</label>
+    <button class="btn-blue" (click)="openModal()">Add Exercise</button>
+  </div>
+  <div>
+      <button class="btn-expand"><mat-icon>keyboard_arrow_up</mat-icon></button>
+      <button class="btn-delete" (click)="data.deleteSet(number-1)"><mat-icon>delete</mat-icon></button>
+  </div>
+</div>
+
+<app-exercise
+  *ngFor="let exercise of data.user.workoutTemplates[data.selectedTemplate].sets[number-1].exercises"
+  [setPlace]="number-1"
+  [exercisePlace]="exercise.place"
+></app-exercise>
+
+<app-modal *ngIf="displayModal" (close)="displayModal = false">
+
+  <h2>Add Exercise</h2>
+  
+  <form [formGroup]="form" (submit)="addExercise()">
+    <input #firstModalInput formControlName="name" id="name" type="text">
+    <label for="name">Exercise Name</label>
+  
+    <input formControlName="kg" id="kg" type="text">
+    <label for="kg">Weight (kg)</label>
+
+    <button class="btn-grey">Add Exercise</button>
+  </form>
+
+</app-modal>

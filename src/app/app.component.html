@@ -1,0 +1,33 @@
+
+<div id="banner-logo">
+    <label id="logo-app">Workout App</label>
+    <label id="logo-user" *ngIf="data.user">Logged in as {{ data.user.firstName }} {{ data.user.lastName }}</label>
+</div>
+
+<div id="title">{{ data.title }}</div>
+<div id="date">{{ data.subtitle }}</div>
+<div class="v-line"></div>
+
+<router-outlet></router-outlet>
+
+<footer>
+    <div class="v-line"></div>
+    <div id="banner-footer">
+        <div id="links">
+            <a #l1 href="https://em-portfolio.azurewebsites.net" target="_blank"
+                (click)="isLinkClicked[0] = true; l1.style.color = '#858483a8'"
+                (mouseenter)="l1.style.color = '#b2b0d880'"
+                (mouseleave)="l1.style.color = isLinkClicked[0] ? '#858483a8' : '#E3E2DE'">
+                    Main Website
+            </a>
+            <a #l2 href="https://github.com/EugeneMetlitski" target="_blank"
+                (click)="isLinkClicked[1] = true; l2.style.color = '#858483a8'"
+                (mouseenter)="l2.style.color = '#b2b0d880'"
+                (mouseleave)="l2.style.color = isLinkClicked[1] ? '#858483a8' : '#E3E2DE'">
+                    Github
+            </a>
+        </div>
+        <label>Created by Eugene Metlitski</label>
+    </div>
+</footer>
+  

@@ -1,0 +1,27 @@
+
+<div id="banner-buttons">
+  <div class="button-group">
+    <button class="btn-grey" style="margin-left:0;" (click)="saveWorkout()">Save Workout</button>
+    <button class="btn-grey" (click)="saveTemplates()">Save Templates</button>
+  </div>
+  <div class="button-group">
+    <button class="btn-grey" routerLink="/workout-app/templates">View Templates</button>
+    <button class="btn-grey" style="margin-right:0;" (click)="logout()">Log Out</button>
+  </div>
+</div>
+
+<label
+  *ngIf="feedback.txt.length > 0"
+  id="feedback"
+  [style.background]="feedback.bg">
+    {{ feedback.txt }}
+</label>
+
+<div id="sets">
+  <button class="btn-blue" (click)="data.addNewSet();">Add Set</button>
+  <app-set *ngFor="let set of data.user.workoutTemplates[data.selectedTemplate].sets"
+    [number]="set.place+1"
+    [style.marginTop]="(set.place === 0) ? '10px' : '30px'"
+    class="set"
+  ></app-set>
+</div>

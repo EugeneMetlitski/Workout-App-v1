@@ -1,0 +1,44 @@
+
+<div id="banner-templates">
+  <div class="button-group">
+    <button class="btn-grey" style="margin-left:0;" (click)="saveTemplates()">Save Templates</button>
+    <button class="btn-grey" style="margin-left:0;" (click)="videwWorkouts()">View Workouts</button>
+  </div>
+  <div class="button-group">
+    <button class="btn-grey" style="margin-right:0;" (click)="logout();">Log Out</button>
+  </div>
+</div>
+
+<label
+  *ngIf="feedback.txt.length > 0"
+  id="feedback"
+  [style.background]="feedback.bg">
+    {{ feedback.txt }}
+</label>
+
+<div id="content-templates">
+
+  <div id="new-exercise">
+    <button class="btn-blue new-exercise" (click)="openModal()">New Exercise</button>
+  </div>
+
+  <div *ngFor="let template of data.user.workoutTemplates" class="template-banner">
+    <button class="btn-delete" (click)="deleteTemplate(template.name)"><mat-icon>delete</mat-icon></button>
+    <button class="btn-blue" (click)="onDoExerciseClicked(template.place);">Do Exercise</button>
+    <div class="txt">{{ template.name }}</div>
+  </div>
+
+</div>
+
+<app-modal *ngIf="renderModal" (close)="renderModal = false">
+
+  <h2>Create New Template</h2>
+
+  <form [formGroup]="form" (submit)="createNewTemplate()">
+    <input #firstModalInput formControlName="name" id="name" type="text">
+    <label for="name">Name</label>
+
+    <button class="btn-grey" [disabled]="form.invalid">Create</button>
+  </form>
+
+</app-modal>

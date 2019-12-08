@@ -1,0 +1,32 @@
+
+<button (click)="templates()">Templates</button>
+<br />
+
+<h2>Workouts</h2>
+
+<div id="workouts" *ngFor="let workout of workouts">
+  <h3>
+    {{ workout.name }} ({{ workout.date }}), id: {{ workout.workoutId }}
+  </h3>
+
+  <div *ngFor="let set of workout.workoutSets">
+    <h4>
+      Set: {{ set.place + 1 }}, id: {{ set.workoutSetId }}
+    </h4>
+
+    <div *ngFor="let exercise of set.workoutExercises">
+      <h5>
+        Exercise: {{ exercise.name }},
+        kg: {{ exercise.kg }},
+        id: {{ exercise.workoutExerciseId }}
+      </h5>
+      <div *ngFor="let rep of exercise.workoutReps">
+        <h6>
+          Reps: {{ rep.value }},
+          id: {{ rep.workoutRepId }}
+        </h6>
+      </div>
+    </div>
+  </div>
+
+</div>

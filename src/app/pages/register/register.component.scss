@@ -1,0 +1,61 @@
+
+:host {
+    display: block;
+    padding: 0 15px;
+}
+
+#banner-login {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+form {
+    margin: 35px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    width: 50%;
+    min-width: 250px;
+
+    input {
+        margin-top: 10px;
+        text-align: center;
+        border-radius: 8px;
+        
+        color: #030303;
+        font-family: 'Stylish', sans-serif;
+        font-size: 15px;
+        outline: none;
+    }
+    
+    label {
+        margin-top: 6px;
+        text-align: center;
+
+        font-family: 'Special Elite', cursive;
+        font-size: 14px;
+        color: #E3E2DE;
+    }
+    
+    button {
+        cursor: pointer;
+        margin: 25px auto 0 auto;
+        width: 100px;
+        border-radius: 8px;
+    }
+
+    button:disabled {
+        cursor: default;
+    
+        opacity: 0.4;
+        background: rgba(208, 228, 231, 0.842);
+        border: 1px solid transparent;
+    }
+
+    #warning {
+        margin-top: 10px;
+        padding: 7px 5px 5px 5px;
+        border-radius: 3px;
+    }
+}

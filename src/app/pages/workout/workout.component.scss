@@ -1,0 +1,46 @@
+
+:host {
+    display: block;
+    padding: 0 15px;
+}
+
+#banner-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .button-group {
+        display: flex;
+        justify-content: space-between;
+
+        button {
+            margin: 0 5px;
+        }
+    }
+}
+
+#sets {
+    margin-top: 30px;
+
+    button {
+        margin-left: 20px;
+        display: inline-block;
+    }
+
+    .set {
+        margin-top: 30px;
+    }
+}
+
+#feedback {
+    display: block;
+
+    width: 93%;
+    margin: 20px auto 0 auto;
+    padding: 7px 5px 5px 5px;
+    border-radius: 3px;
+    
+    text-align: center;
+    font-size: 15px;
+    color: #E3E2DE;
+}

@@ -1,0 +1,50 @@
+
+<img src="../../../assets/workout.png" alt="Exercise Diagram">
+
+<div id="banner">
+  <div class="banner-group">
+    <div id="name">{{
+        data.user.workoutTemplates[data.selectedTemplate].sets[setPlace].exercises[exercisePlace].name
+      }} {{
+        data.user.workoutTemplates[data.selectedTemplate].sets[setPlace].exercises[exercisePlace].kg
+      }}kg
+    </div>
+    <button class="btn-blue" (click)="addReps()">Add Reps</button>
+  </div>
+  <div class="banner-group">
+    <button class="btn-edit" (click)="openModal()"><mat-icon>border_color</mat-icon></button>
+    <button class="btn-delete" (click)="deleteExercise()"><mat-icon>delete</mat-icon></button>
+  </div>
+</div>
+
+<div id="reps-set">
+  <div
+    class="reps"
+    *ngFor="let rep of data.user.workoutTemplates[data.selectedTemplate].sets[setPlace].exercises[exercisePlace].reps"
+  >
+  <div class="txt-reps">Reps: {{ rep.value }}</div>
+    <button class="btn-expand icon-add" (click)="increaseReps(rep.place)"><mat-icon>add</mat-icon></button>
+    <button class="btn-expand icon-remove" (click)="decreaseReps(rep.place)"><mat-icon>remove</mat-icon></button>
+    <button class="btn-delete"><mat-icon (click)="deleteReps(rep.place)">delete</mat-icon></button>
+  </div>
+</div>
+
+<app-modal *ngIf="displayModal" (close)="displayModal = false">
+
+  <h2>Edit Exercise</h2>
+  
+  <form [formGroup]="form" (submit)="editExercise()">
+    <input formControlName="name" id="name" type="text"
+      value="{{ data.user.workoutTemplates[data.selectedTemplate].sets[setPlace].exercises[exercisePlace].name }}"
+    >
+    <label for="name">Exercise Name</label>
+  
+    <input #firstModalInput formControlName="kg" id="kg" type="text"
+      value="{{ data.user.workoutTemplates[data.selectedTemplate].sets[setPlace].exercises[exercisePlace].kg }}"
+    >
+    <label for="kg">Weight (kg)</label>
+
+    <button class="btn-grey">Edit Exercise</button>
+  </form>
+
+</app-modal>

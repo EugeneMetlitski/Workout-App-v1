@@ -1,0 +1,76 @@
+
+#banner-logo {
+    margin-top: 5px;
+
+    display: flex;
+    justify-content: space-between;
+
+    #logo-app {
+        transform: translate(-20px, 7px);
+        font-family: 'Tangerine', cursive;
+        font-size: 25px;
+        color: #46A29F;
+    }
+
+    #logo-user {
+        transform: translate(20px, 7px);
+        font-family: 'Tangerine', cursive;
+        font-size: 25px;
+        color: #46A29F;
+    }
+}
+
+#title {
+    margin-top: 50px;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 30px;
+    color: #E3E2DE;
+}
+
+#date {
+    margin-top: 25px;
+    text-align: center;
+    font-family: 'Special Elite', cursive;
+    font-size: 14px;
+    color: #E3E2DE;
+}
+
+.v-line {
+    background: #9B1750;
+    margin-top: 15px;
+    height: 1px;
+    box-shadow: 0px 1px 10px rgba(255, 255, 255, 0.16);
+}
+
+footer {
+    margin-top: 50px;
+
+    #banner-footer {
+        margin: 12px auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        #links {
+            display: flex;
+            flex-direction: column;
+
+            a {
+                text-decoration: none;
+                margin-top: 1px;
+                color: #E3E2DE;
+                font-family: 'Stylish', sans-serif;
+                font-size: 13px;
+                font-weight: 100;
+            }
+        }
+
+        label {
+            font-family: 'Tangerine', cursive;
+            font-size: 21px;
+            color: #46A29F;
+        }
+    }
+}
