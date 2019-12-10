@@ -9,7 +9,7 @@ import { User, DataService, Workout, WorkoutTemplate } from './data.service';
 export class WebService {
 
   // homeUrl = 'https://localhost:44360';
-  homeUrl = 'https://em-portfolio.azurewebsites.net';
+  homeUrl = 'http://eugene-metlitski.com';
 
   constructor(
     private http: HttpClient,
